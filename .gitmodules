@@ -7,3 +7,6 @@
 [submodule "MazeRL"]
 	path = MazeRL
 	url = https://github.com/AmmarTee/MazeRL.git
+[submodule "PendulumBalance"]
+	path = PendulumBalance
+	url = https://github.com/AmmarTee/PendulumBalance.git
