@@ -4,3 +4,6 @@
 [submodule "DoublePendulum"]
 	path = DoublePendulum
 	url = https://github.com/AmmarTee/DoublePendulum.git
+[submodule "MazeRL"]
+	path = MazeRL
+	url = https://github.com/AmmarTee/MazeRL.git
