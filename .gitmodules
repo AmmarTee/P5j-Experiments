@@ -1,0 +1,6 @@
+[submodule "3BodyProblem"]
+	path = 3BodyProblem
+	url = https://github.com/AmmarTee/3BodyProblem.git
+[submodule "DoublePendulum"]
+	path = DoublePendulum
+	url = https://github.com/AmmarTee/DoublePendulum.git
