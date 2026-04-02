@@ -3,23 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snake Game</title>
+  <title>Snake Neuroevolution Trainer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="game-shell">
-    <h1>Snake</h1>
-    <div class="hud">
-      <p>Score: <span id="score">0</span></p>
-      <p>Best: <span id="best">0</span></p>
-    </div>
+  <main class="trainer-shell">
+    <h1>Snake Agents Neuroevolution Trainer</h1>
 
-    <canvas id="game" width="400" height="400" aria-label="Snake game board"></canvas>
+    <section class="hud-grid">
+      <p>Generation: <span id="generation">1</span></p>
+      <p>Alive Agents: <span id="aliveAgents">0</span></p>
+      <p>Current Gen Best: <span id="currentBest">0</span></p>
+      <p>Global Best: <span id="globalBest">0</span> / 100</p>
+      <p>Avg Fitness: <span id="avgFitness">0</span></p>
+      <p>Hard Resets: <span id="hardResets">0</span></p>
+      <p>Best From Gen: <span id="bestGen">1</span></p>
+      <p>Tick Speed: <span id="speed">6x</span></p>
+      <p>Target Topology: <span id="hiddenTarget">2x12</span></p>
+      <p>Avg Hidden Neurons: <span id="avgHidden">12.0</span></p>
+      <p>Avg Hidden Layers: <span id="avgLayers">2.0</span></p>
+    </section>
 
-    <p class="help">Move: Arrow keys or WASD</p>
-    <p class="help">Pause: Space | Restart: Enter</p>
-    <p id="status" class="status">Press any direction key to start</p>
+    <section class="board-wrap" aria-label="All agent windows">
+      <div id="agentGrid" class="agent-grid"></div>
+    </section>
+
+    <p id="status" class="status">Training in progress</p>
+    <p class="help">Controls: Space pause or resume | [ slower | ] faster | H/J hidden width +/- | U/K layer depth +/- | R hard reset | Autosave enabled</p>
   </main>
+
+  <aside class="network-dock" aria-label="Neural network graph">
+    <h2>Evolving Policy Network</h2>
+    <p class="network-subtitle">Current generation best agent</p>
+    <canvas id="brain" width="320" height="230"></canvas>
+  </aside>
 
   <script src="script.js"></script>
 </body>
